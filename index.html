@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      justify-content: center;
+
+    }
+
+    #container {
+      width: 1100px;
+      height: 700px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      height: 250px;
+      width: 300px;
+      box-shadow: 0px 0px 30px lightslategrey;
+      margin: 20px;
+    }
+
+    .box2 {
+      height: 65%;
+      width: 100%;
+      /*background-color: lightsalmon;*/
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+
+    .box3 {
+      height: 35%;
+      width: 100%;
+      background-color: lightgray;
+    }
+
+    .title {
+      margin: 0px;
+      padding: 5px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .icon-span {
+      position: relative;
+      bottom: 5px;
+      padding-right: 10px;
+    }
+
+    .box:hover {
+      box-shadow: 0px 0px 40px black;
+    }
+
+
+    .imageOfType {
+      margin-top: 5px;
+      margin-right: 5px;
+      ;
+    }
+
+    /*Style for main page with a list of workshops*/
+
+    .header-and-most-popular {
+      width: 95%;
+
+
+    }
+
+    header {
+      height: 150px;
+      background-color: #3F3737;
+      color: white;
+      text-align: center;
+    }
+
+    .most-popular-workshops {
+      height: 250px;
+      background-color: #C9CFCF;
+      text-align: center;
+    }
+
+    .filter-container {
+      width: 200px;
+      border: 1px solid #3F3737;
+      margin-left: 20px;
+      min-height: 600px;
+      margin-bottom: 20px;
+    }
+
+    .filter-and-workshops-container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .workshops-main-container {
+      margin-left: 20px;
+      display: flex;
+    }
+
+    /* Style for popup*/
+
+    .forPopupLayout {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+
+    }
+
+    #myPopup {
+      visibility: hidden;
+      width: 80%;
+      height: 90vh;
+      position: fixed;
+      margin-bottom: 80px;
+      background-color: white;
+      z-index: 1;
+      /* display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; */
+      border: 1px solid #3F3737;
+      overflow: scroll;
+      overflow-x: hidden;
+
+    }
+
+    #myPopup.show {
+      visibility: visible;
+    }
+
+    #popupTitle,
+    #popupFromJson {
+      font-weight: bold;
+      padding-bottom: 20px;
+    }
+
+    #popupCloseButton {
+      margin-top: 5px;
+      margin-right: 5px;
+      padding: 5px 7px;
+      border-radius: 5px;
+      float: right;
+
+    }
+
+
+
+    /*Style for pop up*/
+    .popup-container-for-full-popup {
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+    }
+
+    /*#popup-main-container{
+    width: 80%;
+    
+    border: 1px solid #BDBDBD;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    overflow: scroll;
+    overflow-x: hidden;
+    
+}*/
+
+    #popup-full-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #popup-container {
+      width: 90%;
+      background-color: white;
+    }
+
+    #popup-info-container {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .popup-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      padding-bottom: 20px;
+      flex-direction: row;
+
+
+    }
+
+    @media (max-width: 800px) {
+      .popup-header {
+        flex-direction: column;
+      }
+    }
+
+    .popup-workshop-title-container {
+      margin: 10px 270px 10px 30px;
+    }
+
+    @media (max-width: 800px) {
+      .popup-workshop-title-container {
+        margin-right: 30px;
+      }
+    }
+
+
+    .popup-share {
+      text-align: right;
+    }
+
+    .workshop-image {
+      text-align: left;
+    }
+
+    .popup-p {
+      padding-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .popup-h1 {
+      font-size: 46px;
+    }
+
+    .popup-h3 {
+      font-size: 25px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .popup-span {
+      margin-right: 10px;
+      margin-left: 5px;
+    }
+
+    .instruction-note {
+      font-weight: bold;
+    }
+
+    .instrustion-note-text {
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    hr {
+      background-color: #E4E4E4;
+    }
+
+    .popup-li {
+      list-style-position: inside;
+
+    }
+
+    .materials {
+      margin-bottom: 20px;
+    }
+
+    .popup-li,
+    .popup-p {
+      line-height: 1.5;
+    }
+
+    .share-buttons:hover {
+      border: 2px solid #BDBDBD;
+      border-radius: 8px;
+    }
+
+    /*Custom scrollbar: */
+    ::-webkit-scrollbar {
+      width: 17px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #C9CFCF;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container-for-whole-webpage">
+    <div class="header-and-most-popular">
+      <header>Kaospilot</header>
+      <div class="most-popular-workshops">
+        <h2>Most popular workshops</h2>
+      </div>
+    </div>
+    <div class="forPopupLayout">
+      <div class="popup-text" id="myPopup">
+      
+        <button id="popupCloseButton" onclick="closePopup()">X</button>
+          <div class="popup-header">
+            
+            <img id="popup-main-image" class="workshop-image" src="images/teamwork.png" alt="workshope image" width="150px">
+            <div class="popup-workshop-title-container">
+              <h1 class="popup-h1" id="popup-header"></h1>
+              <div id="popup-info-container">
+                <img src="images/Difficulty---medium.png" alt="dificulty" height="30px">
+                <span id="popup-difficulty" class="popup-info popup-span"></span>
+                <img src="images/people.png" alt="The number of participants" height="30px">
+                <span id="popup-participants" class="popup-span"></span>
+                <img src="images/clock.png" alt="Duration" height="30px">
+                <span id="popup-duration" class="popup-span"></span>
+              </div>
+            </div>
+
+            <div class="popup-share">
+              <img class="share-buttons" src="images/share.png" alt="share icon" width="50px">
+              <img class="share-buttons favorite" src="images/Heart---clicked.png" alt="favorite icon" width="50px">
+              
+            </div>
+            
+          </div>
+          <div id="popup-full-container">
+            <div id="popup-container">
+              <p class="popup-p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, corrupti. Saepe
+                quasi,
+                aut ipsum itaque suscipit at qui! Delectus reiciendis unde explicabo minima doloremque deleniti
+                accusantium voluptates eligendi, eaque numquam ipsa, quia odio tenetur in vero velit, earum
+                veniam minus. Deserunt quisquam recusandae nostrum nemo dolor, nisi magnam illum voluptates
+                dolore. Natus sequi odio accusamus deserunt repellendus veritatis nemo perferendis nostrum rem
+                qui neque recusandae sunt reiciendis cumque fuga fugiat cupiditate, illum debitis autem tempora
+                non temporibus pariatur, officiis suscipit? </p>
+              <hr>
+              <h3 class="popup-h3">Goals</h3>
+              <p class="popup-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, natus ratione eos quod
+                ipsa
+                amet!</p>
+              <hr>
+              <h3 class="popup-h3">Attachments</h3>
+              <a href="images/instructionForWorkshop.docx" download="file_name"><img
+                  src="images/attachmentIcon.JPG"></a>
+              <hr>
+              <h3 class="popup-h3">Materials</h3>
+              <ul class="materials">
+                <li class="popup-li">Table</li>
+                <li class="popup-li">Several boxes of Lego</li>
+              </ul>
+              <hr>
+              <h3 class="popup-h3">Instructions</h3>
+              <h4>Step 1</h4>
+              <p class="popup-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, sed voluptate
+                quasi
+                cum consequuntur molestias.</p>
+
+              <p class="instruction-note">Facilitator note</p>
+              <p class="instrustion-note-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore,
+                perspiciatis.</p>
+              <h4>Step 2</h4>
+              <p class="popup-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur excepturi
+                perspiciatis
+                maxime, aliquid ut itaque similique nihil ullam iusto eum obcaecati distinctio dolore!</p>
+              <h4>Step 3</h4>
+              <p class="popup-p"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo minus nemo vitae
+                laborum a,
+                nisi in sint, illum, provident rem eos magnam! Beatae voluptatibus hic minima vitae dolores.
+                Laboriosam, itaque.</p>
+
+
+            </div>
+          </div>
+       
+      </div>
+    </div>
+    <div class="filter-and-workshops-container">
+      <div class="filter-container">Filter</div>
+      <div id="container">
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    //add new workshops from json file dinamically
+    fetch('workshops1.json').then((response) => response.json()).then((json) => {
+      for (let i = 0; i < json.length; i++) {
+        const modal = document.createElement("div");
+        modal.classList.add('modal');
+
+        modal.innerHTML = `<div class="box" onclick="myFunction()">
+        <div class="box2" style="background-color: ${json[i].backgroundColor}"><img class="imageOfType" src="${json[i].typeImage}" width="30px"></div>
+        <div class="box3">
+          <p class="title">${json[i].title}</p>
+          <br />
+          <i class="material-icons" style="font-size: 25px; padding-left: 10px">
+            signal_cellular_alt_2_bar
+          </i>
+
+          <span class="icon-span">${json[i].difficulty}</span>
+          <i class="material-icons">group</i>
+          <span class="icon-span">${json[i].minNumberOfParticipants} - ${json[i].maxNumberOfParticipants}</span>
+          <i class="material-icons">schedule</i>
+          <span class="icon-span">${json[i].minDuration} - ${json[i].maxDuration}</span>
+        </div>`;
+        const container = document.getElementById("container");
+        container.appendChild(modal);
+
+      }
+    });
+
+    //popup opens when user clicks on workshops
+    function myFunction() {
+      fetch('workshops1.json').then((response) => response.json()).then((json) => {
+        const workshopList = document.getElementsByClassName('modal');
+        for (let i = 0; i < workshopList.length; i++) {
+          workshopList[i].onclick = function () {
+            const elementId = i;
+            console.log(elementId);
+            document.getElementById("popup-header").innerText = json[elementId].title;
+            document.getElementById("popup-difficulty").innerText = json[elementId].difficulty;
+            document.getElementById("popup-participants").innerText = `${json[elementId].minNumberOfParticipants} - ${json[elementId].maxNumberOfParticipants}`;
+            document.getElementById("popup-duration").innerText = `${json[elementId].minDuration} - ${json[elementId].maxDuration}`;
+            document.getElementById("popup-main-image").setAttribute("src", json[elementId].popupImage);
+            document.getElementById("myPopup").classList.toggle("show");
+
+          }
+        }
+      });
+    }
+
+    //close popup when user clicks at Close button
+    function closePopup() {
+      document.getElementById("myPopup").classList.remove("show");
+    }
+
+  </script>
+</body>
+
+</html>
