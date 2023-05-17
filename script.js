@@ -5,7 +5,7 @@
           const modal = document.createElement("div");
           modal.classList.add('modal');
   
-          modal.innerHTML = `<div class="box" onclick="myFunction()">
+          modal.innerHTML = `<div class="box" onclick="popupForWorkshop()">
           <div class="box2" style="background-color: ${json[i].backgroundColor}"><img class="imageOfType" src="${json[i].typeImage}" width="30px"></div>
           <div class="box3">
             <p class="title">${json[i].title}</p>
@@ -22,17 +22,17 @@
           </div>`;
           const container = document.getElementById("container");
           container.appendChild(modal);
-  
+          modal.id=i;
         }
       });
   
       //popup opens when user clicks on workshops
-      function myFunction() {
+      function popupForWorkshop() {
         fetch('workshops1.json').then((response) => response.json()).then((json) => {
           const workshopList = document.getElementsByClassName('modal');
           for (let i = 0; i < workshopList.length; i++) {
             workshopList[i].onclick = function () {
-              const elementId = i;
+              const elementId = workshopList[i].id;
               console.log(elementId);
               document.getElementById("popup-header").innerText = json[elementId].title;
               document.getElementById("popup-difficulty").innerText = json[elementId].difficulty;
