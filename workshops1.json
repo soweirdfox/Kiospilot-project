@@ -25,7 +25,8 @@
         "step3":"Organize participants into groups of 5 - 7. Each group sits around the table with a box of Lego."
     },
     "facilitatorNote":"Prepare the assignments in step 3 beforehand",
-    "popupText":"text1"
+    "popupText":"text1",
+    "isMostPopular": true
     
 },
 {
@@ -39,7 +40,8 @@
     "popupImage": "images/Rock-paper-scissors.svg.png",
     "typeImage":"images/lightning.png",
     "backgroundColor":"#5C5C5C",
-    "popupText":"text2"
+    "popupText":"text2",
+    "isMostPopular": false
 },
 {
     "title": "Snowball",
@@ -52,7 +54,8 @@
     "popupImage": "images/snowball.jpg",
     "typeImage":"images/idea.png",
     "backgroundColor":"lightsalmon",
-    "popupText":"text3"
+    "popupText":"text3",
+    "isMostPopular": false
 },
 {
     "title": "Lego challenge",
@@ -65,7 +68,8 @@
     "popupImage": "images/teamwork.png",
     "typeImage":"images/teamwork.png",
     "backgroundColor":"#5C5C5C",
-    "popupText":"text4"
+    "popupText":"text4",
+    "isMostPopular": false
 },
 {
     "title": "Rock, Paper, Scissors",
@@ -78,7 +82,8 @@
     "popupImage": "images/Rock-paper-scissors.svg.png",
     "typeImage":"images/lightning.png",
     "backgroundColor":"lightsalmon",
-    "popupText":"text5"
+    "popupText":"text5",
+    "isMostPopular": true
 }, 
 {
     "title": "Snowball",
@@ -91,7 +96,8 @@
     "popupImage": "images/snowball.jpg",
     "typeImage":"images/idea.png",
     "backgroundColor":"#5C5C5C",
-    "popupText":"text6"
+    "popupText":"text6",
+    "isMostPopular": true
 },
 {
     "title": "Lego challenge",
@@ -104,7 +110,8 @@
     "popupImage": "images/teamwork.png",
     "typeImage":"images/teamwork.png",
     "backgroundColor":"lightsalmon",
-    "popupText":"text7"
+    "popupText":"text7",
+    "isMostPopular": false
 },
 {
     "title": "Snowball",
@@ -117,7 +124,8 @@
     "popupImage": "images/snowball.jpg",
     "typeImage":"images/idea.png",
     "backgroundColor":"#5C5C5C",
-    "popupText":"text6"
+    "popupText":"text6",
+    "isMostPopular": false
 },
 {
     "title": "Lego challenge",
@@ -130,7 +138,8 @@
     "popupImage": "images/teamwork.png",
     "typeImage":"images/teamwork.png",
     "backgroundColor":"#5C5C5C",
-    "popupText":"text4"
+    "popupText":"text4",
+    "isMostPopular": true
 },
 {
     "title": "Rock, Paper, Scissors",
@@ -143,7 +152,8 @@
     "popupImage": "images/Rock-paper-scissors.svg.png",
     "typeImage":"images/lightning.png",
     "backgroundColor":"lightsalmon",
-    "popupText":"text5"
+    "popupText":"text5",
+    "isMostPopular": false
 }, 
 {
     "title": "Snowball",
@@ -156,7 +166,8 @@
     "popupImage": "images/snowball.jpg",
     "typeImage":"images/idea.png",
     "backgroundColor":"#5C5C5C",
-    "popupText":"text6"
+    "popupText":"text6",
+    "isMostPopular": true
 },
 {
     "title": "Lego challenge",
@@ -169,5 +180,6 @@
     "popupImage": "images/teamwork.png",
     "typeImage":"images/teamwork.png",
     "backgroundColor":"lightsalmon",
-    "popupText":"text9"
+    "popupText":"text9",
+    "isMostPopular": false
 }]

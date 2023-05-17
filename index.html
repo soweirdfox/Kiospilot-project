@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
   <style>
-   
+
   </style>
 </head>
 
@@ -21,84 +21,92 @@
     <div class="header-and-most-popular">
       <header>Kaospilot</header>
       <div class="most-popular-workshops">
-        <h2>Most popular workshops</h2>
+        <div>
+          <h2>Most popular workshops</h2>
+        </div>
+        <div class="most-popular-inner">
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <div id="most-container">
+          </div>
+          <a id="next-btn" class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
       </div>
     </div>
     <div class="forPopupLayout">
       <div class="popup-text" id="myPopup">
-      
+
         <button id="popupCloseButton" onclick="closePopup()">X</button>
-          <div class="popup-header">
-            
-            <img id="popup-main-image" class="workshop-image" src="images/teamwork.png" alt="workshope image" width="150px">
-            <div class="popup-workshop-title-container">
-              <h1 class="popup-h1" id="popup-header"></h1>
-              <div id="popup-info-container">
-                <img src="images/Difficulty---medium.png" alt="dificulty" height="30px">
-                <span id="popup-difficulty" class="popup-info popup-span"></span>
-                <img src="images/people.png" alt="The number of participants" height="30px">
-                <span id="popup-participants" class="popup-span"></span>
-                <img src="images/clock.png" alt="Duration" height="30px">
-                <span id="popup-duration" class="popup-span"></span>
-              </div>
-            </div>
+        <div class="popup-header">
 
-            <div class="popup-share">
-              <img class="share-buttons" src="images/share.png" alt="share icon" width="50px">
-              <img class="share-buttons favorite" src="images/Heart---clicked.png" alt="favorite icon" width="50px">
-              
-            </div>
-            
-          </div>
-          <div id="popup-full-container">
-            <div id="popup-container">
-              <p class="popup-p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, corrupti. Saepe
-                quasi,
-                aut ipsum itaque suscipit at qui! Delectus reiciendis unde explicabo minima doloremque deleniti
-                accusantium voluptates eligendi, eaque numquam ipsa, quia odio tenetur in vero velit, earum
-                veniam minus. Deserunt quisquam recusandae nostrum nemo dolor, nisi magnam illum voluptates
-                dolore. Natus sequi odio accusamus deserunt repellendus veritatis nemo perferendis nostrum rem
-                qui neque recusandae sunt reiciendis cumque fuga fugiat cupiditate, illum debitis autem tempora
-                non temporibus pariatur, officiis suscipit? </p>
-              <hr>
-              <h3 class="popup-h3">Goals</h3>
-              <p class="popup-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, natus ratione eos quod
-                ipsa
-                amet!</p>
-              <hr>
-              <h3 class="popup-h3">Attachments</h3>
-              <a href="images/instructionForWorkshop.docx" download="file_name"><img
-                  src="images/attachmentIcon.JPG"></a>
-              <hr>
-              <h3 class="popup-h3">Materials</h3>
-              <ul class="materials">
-                <li class="popup-li">Table</li>
-                <li class="popup-li">Several boxes of Lego</li>
-              </ul>
-              <hr>
-              <h3 class="popup-h3">Instructions</h3>
-              <h4>Step 1</h4>
-              <p class="popup-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, sed voluptate
-                quasi
-                cum consequuntur molestias.</p>
-
-              <p class="instruction-note">Facilitator note</p>
-              <p class="instrustion-note-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore,
-                perspiciatis.</p>
-              <h4>Step 2</h4>
-              <p class="popup-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur excepturi
-                perspiciatis
-                maxime, aliquid ut itaque similique nihil ullam iusto eum obcaecati distinctio dolore!</p>
-              <h4>Step 3</h4>
-              <p class="popup-p"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo minus nemo vitae
-                laborum a,
-                nisi in sint, illum, provident rem eos magnam! Beatae voluptatibus hic minima vitae dolores.
-                Laboriosam, itaque.</p>
-
-
+          <img id="popup-main-image" class="workshop-image" src="images/teamwork.png" alt="workshope image"
+            width="150px">
+          <div class="popup-workshop-title-container">
+            <h1 class="popup-h1" id="popup-header"></h1>
+            <div id="popup-info-container">
+              <img src="images/Difficulty---medium.png" alt="dificulty" height="30px">
+              <span id="popup-difficulty" class="popup-info popup-span"></span>
+              <img src="images/people.png" alt="The number of participants" height="30px">
+              <span id="popup-participants" class="popup-span"></span>
+              <img src="images/clock.png" alt="Duration" height="30px">
+              <span id="popup-duration" class="popup-span"></span>
             </div>
           </div>
-       
+
+          <div class="popup-share">
+            <img class="share-buttons" src="images/share.png" alt="share icon" width="50px">
+            <img class="share-buttons favorite" src="images/Heart---clicked.png" alt="favorite icon" width="50px">
+
+          </div>
+
+        </div>
+        <div id="popup-full-container">
+          <div id="popup-container">
+            <p class="popup-p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, corrupti. Saepe
+              quasi,
+              aut ipsum itaque suscipit at qui! Delectus reiciendis unde explicabo minima doloremque deleniti
+              accusantium voluptates eligendi, eaque numquam ipsa, quia odio tenetur in vero velit, earum
+              veniam minus. Deserunt quisquam recusandae nostrum nemo dolor, nisi magnam illum voluptates
+              dolore. Natus sequi odio accusamus deserunt repellendus veritatis nemo perferendis nostrum rem
+              qui neque recusandae sunt reiciendis cumque fuga fugiat cupiditate, illum debitis autem tempora
+              non temporibus pariatur, officiis suscipit? </p>
+            <hr>
+            <h3 class="popup-h3">Goals</h3>
+            <p class="popup-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, natus ratione eos quod
+              ipsa
+              amet!</p>
+            <hr>
+            <h3 class="popup-h3">Attachments</h3>
+            <a href="images/instructionForWorkshop.docx" download="file_name"><img src="images/attachmentIcon.JPG"></a>
+            <hr>
+            <h3 class="popup-h3">Materials</h3>
+            <ul class="materials">
+              <li class="popup-li">Table</li>
+              <li class="popup-li">Several boxes of Lego</li>
+            </ul>
+            <hr>
+            <h3 class="popup-h3">Instructions</h3>
+            <h4>Step 1</h4>
+            <p class="popup-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, sed voluptate
+              quasi
+              cum consequuntur molestias.</p>
+
+            <p class="instruction-note">Facilitator note</p>
+            <p class="instrustion-note-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore,
+              perspiciatis.</p>
+            <h4>Step 2</h4>
+            <p class="popup-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur excepturi
+              perspiciatis
+              maxime, aliquid ut itaque similique nihil ullam iusto eum obcaecati distinctio dolore!</p>
+            <h4>Step 3</h4>
+            <p class="popup-p"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo minus nemo vitae
+              laborum a,
+              nisi in sint, illum, provident rem eos magnam! Beatae voluptatibus hic minima vitae dolores.
+              Laboriosam, itaque.</p>
+
+
+          </div>
+        </div>
+
       </div>
     </div>
     <div class="filter-and-workshops-container">
