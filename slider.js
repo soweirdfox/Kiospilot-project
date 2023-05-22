@@ -31,6 +31,7 @@ fetch("workshops1.json")
       // Optional parameters
       direction: "horizontal",
       loop: true,
+      slidesPerView: 3,
 
       // If we need pagination
       pagination: {

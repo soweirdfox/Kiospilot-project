@@ -26,7 +26,7 @@
     },
     "facilitatorNote":"Prepare the assignments in step 3 beforehand",
     "popupText":"text1",
-    "isPopular":false
+    "isPopular":true
     
 },
 {
@@ -55,7 +55,7 @@
     "typeImage":"images/idea.png",
     "backgroundColor":"lightsalmon",
     "popupText":"text3",
-    "isPopular":false
+    "isPopular":true
 },
 {
     "title": "Lego challenge",
@@ -69,7 +69,7 @@
     "typeImage":"images/teamwork.png",
     "backgroundColor":"#5C5C5C",
     "popupText":"text4",
-    "isPopular":false
+    "isPopular":true
 },
 {
     "title": "Rock, Paper, Scissors",
@@ -83,7 +83,7 @@
     "typeImage":"images/lightning.png",
     "backgroundColor":"lightsalmon",
     "popupText":"text5",
-    "isPopular":false
+    "isPopular":true
 }, 
 {
     "title": "Snowball",
