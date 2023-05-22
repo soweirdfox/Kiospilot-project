@@ -11,9 +11,13 @@
 
   }
 
+  #container-for-whole-webpage{
+    height: fit-content;
+  }
+
   #container {
     width: 1100px;
-    height: 700px;
+    /*height: 700px;*/
     display: flex;
     flex-wrap: wrap;
   }
@@ -94,12 +98,14 @@
     margin-left: 20px;
     min-height: 600px;
     margin-bottom: 20px;
+    height: 700px;
   }
 
   .filter-and-workshops-container {
     margin-top: 20px;
     display: flex;
     flex-direction: row;
+    height: fit-content;
   }
 
   .workshops-main-container {
@@ -293,4 +299,30 @@
 
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
+  }
+
+  /*Load more button style*/
+  #container-for-workshops{
+    display:flex;
+    flex-direction: column;
+    
+  } 
+
+  #load-more-button-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .button {
+    padding: 10px;
+    background-color: #555;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+  .button:hover {
+    background-color: #C8C8C8;
+    color:#3F3737
   }
