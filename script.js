@@ -9,17 +9,27 @@ fetch("workshops1.json")
       modal.innerHTML = `<div class="box" onclick="popupForWorkshop()">
           <div class="box2" style="background-color: ${json[i].backgroundColor}"><img class="imageOfType" src="${json[i].typeImage}" width="30px"></div>
           <div class="box3">
+          <div class="workshops-title">
             <p class="title">${json[i].title}</p>
+            </dev>
             <br />
+            <div class="icons">
+            <div class="info-icon">
             <i class="material-icons" style="font-size: 25px; padding-left: 10px">
               signal_cellular_alt_2_bar
             </i>
-  
+            
             <span class="icon-span">${json[i].difficulty}</span>
+            </div>
+            <div class="info-icon">
             <i class="material-icons">group</i>
             <span class="icon-span">${json[i].minNumberOfParticipants} - ${json[i].maxNumberOfParticipants}</span>
+            </div>
+            <div class="info-icon">
             <i class="material-icons">schedule</i>
             <span class="icon-span">${json[i].minDuration} - ${json[i].maxDuration}</span>
+            </div>
+            </div>
           </div>`;
       const container = document.getElementById("container");
       container.appendChild(modal);
@@ -60,5 +70,4 @@ function popupForWorkshop() {
 function closePopup() {
   document.getElementById("myPopup").classList.remove("show");
 }
-
 

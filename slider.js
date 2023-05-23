@@ -5,57 +5,35 @@ fetch("workshops1.json")
       if (json[i].isPopular === true) {
          let swiperSlide = document.createElement("div");
          swiperSlide.className = "swiper-slide";
-         swiperSlide.innerHTML =`<div class="box" onclick="popupForWorkshop()">
+         swiperSlide.innerHTML =`<div class="box" onclick="popupForMostPopular()">
          <div class="box2" style="background-color: #999999"><img class="imageOfType" src="${json[i].typeImage}" width="30px"></div>
          <div class="box3">
            <p class="title">${json[i].title}</p>
            <br />
+           <div class="icons">
+            <div class="info-icon">
            <i class="material-icons" style="font-size: 25px; padding-left: 10px">
              signal_cellular_alt_2_bar
            </i>
  
            <span class="icon-span">${json[i].difficulty}</span>
+           </div>
+           <div class="info-icon">
            <i class="material-icons">group</i>
            <span class="icon-span">${json[i].minNumberOfParticipants} - ${json[i].maxNumberOfParticipants}</span>
+           </div>
+           <div class="info-icon">
            <i class="material-icons">schedule</i>
            <span class="icon-span">${json[i].minDuration} - ${json[i].maxDuration}</span>
+           </div>
+           </div>
          </div>`;
          let swiperWrapper = document.querySelector(".swiper-wrapper");
          swiperWrapper.appendChild(swiperSlide);
+         swiperSlide.id=`pop${i}`;
   }
 }
   
-
-
-// fetch("workshops1.json")
-//   .then((response) => response.json())
-//   .then((json) => {
-//     let swiperWrapper = document.querySelector(".swiper-wrapper");
-
-//     for (i = 0; i < json.length; i++) {
-//       if (json[i].isPopular === true) {
-//         let swiperSlide = document.createElement("div");
-//         swiperSlide.className = "swiper-slide";
-//         swiperSlide.innerHTML = `
-//             <div class='slides'>
-        
-//         <div>
-//           <p class="title">${json[i].title}</p>
-//           <br />
-//           <i class="material-icons" style="font-size: 25px; padding-left: 10px">
-//             signal_cellular_alt_2_bar
-//           </i>
-
-//           <span class="icon-span">${json[i].difficulty}</span>
-//           <i class="material-icons">group</i>
-//           <span class="icon-span">${json[i].minNumberOfParticipants} - ${json[i].maxNumberOfParticipants}</span>
-//           <i class="material-icons">schedule</i>
-//           <span class="icon-span">${json[i].minDuration} - ${json[i].maxDuration}</span>
-//         </div>
-//             `;
-//         swiperWrapper.appendChild(swiperSlide);
-//       }
-//     }
     const swiper = new Swiper(".swiper", {
       // Optional parameters
       direction: "horizontal",
@@ -74,3 +52,34 @@ fetch("workshops1.json")
       },
     });
   });
+
+
+//popup opens when user clicks on workshops at most popular section
+function popupForMostPopular() {
+  fetch("workshops1.json")
+    .then((response) => response.json())
+    .then((json) => {
+      const workshopList = document.getElementsByClassName("swiper-slide");
+      for (let i = 0; i < workshopList.length; i++) {
+        workshopList[i].onclick = function () {
+          const mostId = workshopList[i].id;
+          const elementId = mostId.replace('pop','');
+          console.log(elementId);
+          document.getElementById("popup-header").innerText =
+            json[elementId].title;
+          document.getElementById("popup-difficulty").innerText =
+            json[elementId].difficulty;
+          document.getElementById(
+            "popup-participants"
+          ).innerText = `${json[elementId].minNumberOfParticipants} - ${json[elementId].maxNumberOfParticipants}`;
+          document.getElementById(
+            "popup-duration"
+          ).innerText = `${json[elementId].minDuration} - ${json[elementId].maxDuration}`;
+          document
+            .getElementById("popup-main-image")
+            .setAttribute("src", json[elementId].popupImage);
+          document.getElementById("myPopup").classList.toggle("show");
+        };
+      }
+    });
+}

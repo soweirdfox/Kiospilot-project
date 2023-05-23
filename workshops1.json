@@ -124,7 +124,7 @@
     "popupImage": "images/snowball.jpg",
     "typeImage":"images/idea.png",
     "backgroundColor":"#5C5C5C",
-    "popupText":"text6",
+    "popupText":"text8",
     "isPopular":false
 },
 {
@@ -138,7 +138,7 @@
     "popupImage": "images/teamwork.png",
     "typeImage":"images/teamwork.png",
     "backgroundColor":"#5C5C5C",
-    "popupText":"text4",
+    "popupText":"text9",
     "isPopular":false
 },
 {
@@ -152,7 +152,7 @@
     "popupImage": "images/Rock-paper-scissors.svg.png",
     "typeImage":"images/lightning.png",
     "backgroundColor":"lightsalmon",
-    "popupText":"text5",
+    "popupText":"text10",
     "isPopular":false
 }, 
 {
@@ -166,7 +166,7 @@
     "popupImage": "images/snowball.jpg",
     "typeImage":"images/idea.png",
     "backgroundColor":"#5C5C5C",
-    "popupText":"text6",
+    "popupText":"text11",
     "isPopular":true
 },
 {
@@ -180,6 +180,6 @@
     "popupImage": "images/teamwork.png",
     "typeImage":"images/teamwork.png",
     "backgroundColor":"lightsalmon",
-    "popupText":"text9",
+    "popupText":"text12",
     "isPopular":false
 }]
