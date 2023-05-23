@@ -9,7 +9,7 @@ fetch("workshops1.json")
         swiperSlide.className = "swiper-slide";
         swiperSlide.innerHTML = `
             <div class='slides'>
-        <div style="background-color: ${json[i].backgroundColor}"></div>
+        
         <div>
           <p class="title">${json[i].title}</p>
           <br />
