@@ -9,10 +9,11 @@
   } 
 
   #container {
-    width: 1100px;
+    width: 80%;
     height: 700px;
     display: flex;
     flex-wrap: wrap;
+    margin-left: 20px;
   }
 
   .modal{
@@ -28,7 +29,6 @@
   .box2 {
     height: 65%;
     width: 100%;
-    /*background-color: lightsalmon;*/
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -86,11 +86,12 @@
   }
 
   .filter-container {
-    width: 200px;
+    width: 20%;
     border: 1px solid #3F3737;
     margin-left: 20px;
     min-height: 600px;
     margin-bottom: 20px;
+    
   }
 
   .filter-and-workshops-container {
@@ -119,14 +120,10 @@
     width: 80%;
     height: 90vh;
     position: fixed;
-    margin-top: 15%;
+    margin-top: 5%;
     margin-bottom: 20%;
     background-color: white;
     z-index: 1;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     border: 1px solid #3F3737;
     overflow: scroll;
     overflow-x: hidden;
@@ -293,6 +290,13 @@
   }
 /* -----------------slider css--------------- */
 
+.most-popular-part{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 .slider-header{
   text-align: center;
   margin: 5px;
@@ -302,17 +306,18 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width:75%
 }
 .swiper {
   width: 100%;
-  height: 300px;
+  height: 350px;
 }
 .swiper-slide{
   display: flex;
 justify-content: center;
- padding: 10px;
-  width: 90%;
-  height: 95%;
+ padding: 20px;
+ width: 40%;
+  /*height: 95%;*/
 
 }
 .slides{
@@ -325,3 +330,14 @@ justify-content: center;
   border-radius: 10px;
 }
 
+.swiper-button-prev{
+  padding-right: 10px;
+}
+
+.swiper-button-next{
+  padding-left: 10px;
+}
+
+.swiper-pagination{
+  padding-top:20px;
+}
