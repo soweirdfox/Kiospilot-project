@@ -1,7 +1,15 @@
 
 //add first 9 workshops dinamically from json file when the page is loaded
 fetch('workshops1.json').then((response) => response.json()).then((json) => {
-  for (let i = 0; i < 9; i++) {
+  elementQuantity = json.length;
+  console.log(elementQuantity);
+  let workshopsToDisplay;
+  if (elementQuantity<9){
+    workshopsToDisplay = elementQuantity;
+  } else {
+    workshopsToDisplay = 9;
+  }
+  for (let i = 0; i<workshopsToDisplay; i++) {
     const modal = document.createElement("div");
     modal.classList.add('modal');
 
@@ -31,8 +39,15 @@ function loadMoreWorkshops(){
   fetch('workshops1.json').then((response) => response.json()).then((json) => {
     const workshopListAtPage = document.getElementsByClassName('modal');
     let numberOfWorkshops = workshopListAtPage.length;
-    console.log(numberOfWorkshops);
-    for (let i = numberOfWorkshops; i < numberOfWorkshops+9; i++) {
+    console.log(`Workshops at the page: ${numberOfWorkshops}`);
+    let workshopsToAdd;
+    console.log(`Workshops left: ${json.length-numberOfWorkshops}`);
+    if (json.length-numberOfWorkshops < 9) {
+      workshopsToAdd = json.length-numberOfWorkshops;
+    } else {
+      workshopsToAdd = 9;
+    }
+    for (let i = numberOfWorkshops; i < numberOfWorkshops+workshopsToAdd; i++) {
       const modal = document.createElement("div");
       modal.classList.add('modal');
   
