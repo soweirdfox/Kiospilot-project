@@ -50,51 +50,69 @@
     </div>
     <div class="forPopupLayout">
       <div class="popup-text" id="myPopup">
-
-        <button id="popupCloseButton" onclick="closePopup()">X</button>
+        <div class="close-btn-container" onclick="closePopup()">     
+        <img class="close-img" src="images/close.png">
+      </div>
         <div class="popup-header">
-
-          <img id="popup-main-image" class="workshop-image" src="images/teamwork.png" alt="workshope image"
-            width="150px">
+          
           <div class="popup-workshop-title-container">
             <h1 class="popup-h1" id="popup-header"></h1>
             <div id="popup-info-container">
+              <div class="popup-header-info">
+              <p class="pop-info">Level</p>
+              <div class="pop-head-icon">
               <img src="images/Difficulty---medium.png" alt="dificulty" height="30px">
               <span id="popup-difficulty" class="popup-info popup-span"></span>
+            </div>
+            </div>
+            <div class="popup-header-info">
+              <p class="pop-info">Participants</p>
+              <div class="pop-head-icon">
               <img src="images/people.png" alt="The number of participants" height="30px">
               <span id="popup-participants" class="popup-span"></span>
+            </div>
+            </div>
+            <div class="popup-header-info">
+              <p class="pop-info">Duration</p>
+              <div class="pop-head-icon">
               <img src="images/clock.png" alt="Duration" height="30px">
               <span id="popup-duration" class="popup-span"></span>
             </div>
+            </div>
+            </div>
+            
           </div>
 
-          <div class="popup-share">
-            <button id="print-btn" class="button" onclick="window.print()">Print</button>
-            <img class="share-buttons" src="images/share.png" alt="share icon" width="50px">
-            <img class="share-buttons favorite" src="images/Heart---clicked.png" alt="favorite icon" width="50px">
-
-          </div>
+          
 
         </div>
+        
         <div class="popup-full-container">
           <div id="popup-container">
-            <p class="popup-p"><span id="textNumber"></span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, corrupti. Saepe
-              quasi,
-              aut ipsum itaque suscipit at qui! Delectus reiciendis unde explicabo minima doloremque deleniti
-              accusantium voluptates eligendi, eaque numquam ipsa, quia odio tenetur in vero velit, earum
-              veniam minus. Deserunt quisquam recusandae nostrum nemo dolor, nisi magnam illum voluptates
-              dolore. Natus sequi odio accusamus deserunt repellendus veritatis nemo perferendis nostrum rem
-              qui neque recusandae sunt reiciendis cumque fuga fugiat cupiditate, illum debitis autem tempora
-              non temporibus pariatur, officiis suscipit? </p>
-            <hr>
+            <p class="popup-p"><span id="textNumber"></span>A team-building activity in which groups must work together to 
+              build a structure out of lego, but each individual has a secret “assignment” which makes the collaborative 
+              process more challenging. It emphasizes group communication, leadership dynamics, conflict, cooperation, 
+              patience and problem solving strategy. </p>
+            <div class="popup-image-container">
+              <img id="popup-main-image" class="workshop-image" src="images/teamwork.png" alt="workshope image">
+            </div>
+            <h3 class="popup-h3">Step 1</h3>
+            <p class="popup-p">Organize participants into groups of 5 - 7. Each group sits around a table with a box of lego. 
+              Ask participants not to touch the lego until the activity begins.</p>
+            <h3 class="popup-h3">Step 2</h3>
+            <p class="popup-p">Give the instructions: Your task, as a group, is to build a structure with these Lego bricks. 
+              In a moment, each of you will get a piece of paper, where your individual assignment is written. You may not 
+              show or tell your assignment to the rest of the team.
+              You will have 20 minutes to build your structure. You may not speak during the building process. You must 
+              continue building until the time is up. I will announce when the time is up.</p>
             <h3 class="popup-h3">Goals</h3>
             <p class="popup-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo, natus ratione eos quod
               ipsa
               amet!</p>
             <hr>
-            <h3 class="popup-h3">Attachments</h3>
+            <!-- <h3 class="popup-h3">Attachments</h3>
             <a href="images/instructionForWorkshop.docx" download="file_name"><img src="images/attachmentIcon.JPG"></a>
-            <hr>
+            <hr> -->
             <h3 class="popup-h3">Materials</h3>
             <ul class="materials">
               <li class="popup-li">Table</li>
@@ -119,7 +137,13 @@
               laborum a,
               nisi in sint, illum, provident rem eos magnam! Beatae voluptatibus hic minima vitae dolores.
               Laboriosam, itaque.</p>
-
+              <div class="popup-share">
+                <button id="print-btn" class="button" onclick="window.print()">Print</button>
+                <button id="bottom-close-btn" class="button" onclick="closePopup()">Close</button>
+                <!-- <img class="share-buttons" src="images/share.png" alt="share icon" width="50px">
+                <img class="share-buttons favorite" src="images/Heart---clicked.png" alt="favorite icon" width="50px"> -->
+      
+              </div>
 
           </div>
         </div>
