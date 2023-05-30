@@ -106,3 +106,13 @@ function closePopup() {
   document.getElementById("myPopup").classList.remove("show");
 }
 
+//print popup when user clicks at "Print" button
+function popupPrint(){
+  let divToPrint =  document.getElementById('myPopup');
+  let originalContents = document.body.innerHTML;
+  let printContents = document.getElementById('myPopup').innerHTML;
+  document.body.innerHTML = printContents;
+  window.print();
+  document.body.innerHTML = originalContents;
+
+}
