@@ -6,31 +6,65 @@ fetch("workshops1.json")
       const modal = document.createElement("div");
       modal.classList.add("modal");
 
-      modal.innerHTML = `<div class="box" onclick="popupForWorkshop()">
-          <div class="box2" style="background-color: ${json[i].backgroundColor}"><img class="imageOfType" src="${json[i].typeImage}" width="30px"></div>
-          <div class="box3">
-          <div class="workshops-title">
-            <p class="title">${json[i].title}</p>
-            </dev>
-            <br />
-            <div class="icons">
-            <div class="info-icon">
-            <i class="material-icons" style="font-size: 25px; padding-left: 10px">
-              signal_cellular_alt_2_bar
-            </i>
+      modal.innerHTML = modal.innerHTML = `<div class="box" onclick="popupForWorkshop()">
+      <div class="box2" style="background-image: url(${json[i].backgroungImage}); background-size: cover;"><img class="imageOfType" src="${json[i].typeImage}" width="30px"></div>
+      <div class="box3">
+      
+        <p class="title">${json[i].title}</p>
+       
+      
+        <div class="icons">
+        <div class="info-icon">
+        <i class="material-icons" style="font-size: 25px; padding-left: 10px">
+          signal_cellular_alt_2_bar
+        </i>
+        
+        <span class="icon-span">${json[i].difficulty}</span>
+        </div>
+        <div class="info-icon">
+        <i class="material-icons">group</i>
+        <span class="icon-span">${json[i].minNumberOfParticipants} - ${json[i].maxNumberOfParticipants}</span>
+        </div>
+        <div class="info-icon">
+        <i class="material-icons">schedule</i>
+        <span class="icon-span">${json[i].minDuration} - ${json[i].maxDuration}</span>
+        </div>
+        </div>
+      </div>`;
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      // `<div class="box" onclick="popupForWorkshop()">
+      //     <div class="box2" style="background-color: ${json[i].backgroundColor}"><img class="imageOfType" src="${json[i].typeImage}" width="30px"></div>
+      //     <div class="box3">
+      //     <div class="workshops-title">
+      //       <p class="title">${json[i].title}</p>
+      //       </dev>
+          
+      //       <div class="icons">
+      //       <div class="info-icon">
+      //       <i class="material-icons" style="font-size: 25px; padding-left: 10px">
+      //         signal_cellular_alt_2_bar
+      //       </i>
             
-            <span class="icon-span">${json[i].difficulty}</span>
-            </div>
-            <div class="info-icon">
-            <i class="material-icons">group</i>
-            <span class="icon-span">${json[i].minNumberOfParticipants} - ${json[i].maxNumberOfParticipants}</span>
-            </div>
-            <div class="info-icon">
-            <i class="material-icons">schedule</i>
-            <span class="icon-span">${json[i].minDuration} - ${json[i].maxDuration}</span>
-            </div>
-            </div>
-          </div>`;
+      //       <span class="icon-span">${json[i].difficulty}</span>
+      //       </div>
+      //       <div class="info-icon">
+      //       <i class="material-icons">group</i>
+      //       <span class="icon-span">${json[i].minNumberOfParticipants} - ${json[i].maxNumberOfParticipants}</span>
+      //       </div>
+      //       <div class="info-icon">
+      //       <i class="material-icons">schedule</i>
+      //       <span class="icon-span">${json[i].minDuration} - ${json[i].maxDuration}</span>
+      //       </div>
+      //       </div>
+      //     </div>`;
       const container = document.getElementById("container");
       container.appendChild(modal);
       modal.id = i;
@@ -61,6 +95,7 @@ function popupForWorkshop() {
             .getElementById("popup-main-image")
             .setAttribute("src", json[elementId].popupImage);
           document.getElementById("myPopup").classList.toggle("show");
+          document.getElementById("myPopup").scrollTo(0, 0);
         };
       }
     });
