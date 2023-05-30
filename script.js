@@ -13,12 +13,12 @@ fetch('workshops1.json').then((response) => response.json()).then((json) => {
     modal.classList.add('modal');
 
     modal.innerHTML = `<div class="box" onclick="popupForWorkshop()">
-    <div class="box2" style="background-color: ${json[i].backgroundColor}"><img class="imageOfType" src="${json[i].typeImage}" width="30px"></div>
+    <div class="box2" style="background-image: url(${json[i].backgroungImage}); background-size: cover;"><img class="imageOfType" src="${json[i].typeImage}" width="30px"></div>
     <div class="box3">
-    <div class="workshops-title">
+    
       <p class="title">${json[i].title}</p>
-      </dev>
-      <br />
+     
+    
       <div class="icons">
       <div class="info-icon">
       <i class="material-icons" style="font-size: 25px; padding-left: 10px">
@@ -61,12 +61,12 @@ function loadMoreWorkshops() {
       modal.classList.add('modal');
 
       modal.innerHTML = `<div class="box" onclick="popupForWorkshop()">
-      <div class="box2" style="background-color: ${json[i].backgroundColor}"><img class="imageOfType" src="${json[i].typeImage}" width="30px"></div>
+      <div class="box2" style="background-image: url(${json[i].backgroungImage}); background-size: cover;"><img class="imageOfType" src="${json[i].typeImage}" width="30px"></div>
       <div class="box3">
-      <div class="workshops-title">
+     
         <p class="title">${json[i].title}</p>
-        </dev>
-        <br />
+       
+        
         <div class="icons">
         <div class="info-icon">
         <i class="material-icons" style="font-size: 25px; padding-left: 10px">
@@ -117,8 +117,9 @@ function popupForWorkshop() {
           document
             .getElementById("popup-main-image")
             .setAttribute("src", json[elementId].popupImage);
-            document.getElementById("textNumber").innerText = json[elementId].popupText;
+          document.getElementById("textNumber").innerText = json[elementId].popupText;
           document.getElementById("myPopup").classList.toggle("show");
+          document.getElementById("myPopup").scrollTo(0, 0);
         };
       }
     });

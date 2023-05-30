@@ -6,10 +6,10 @@ fetch("workshops1.json")
          let swiperSlide = document.createElement("div");
          swiperSlide.className = "swiper-slide";
          swiperSlide.innerHTML =`<div class="box" onclick="popupForMostPopular()">
-         <div class="box2" style="background-color: #999999"><img class="imageOfType" src="${json[i].typeImage}" width="30px"></div>
+         <div class="box2" style="background-image: url(${json[i].backgroungImage}); background-size: cover;"><img class="imageOfType" src="${json[i].typeImage}" width="30px"></div>
          <div class="box3">
            <p class="title">${json[i].title}</p>
-           <br />
+         
            <div class="icons">
             <div class="info-icon">
            <i class="material-icons" style="font-size: 25px; padding-left: 10px">

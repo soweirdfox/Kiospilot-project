@@ -22,16 +22,18 @@
 
   .modal{
     width: 30%;
+    cursor: pointer;
     
   }
   .box {
-    aspect-ratio: 4/3.5;
+     aspect-ratio: 4/3.5; 
+    
     box-shadow: 0px 0px 30px lightslategrey;
-    margin: 20px;
+    margin: 1.25rem;
   }
 
   .box2 {
-    height: 65%;
+    height: 70%;
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -39,28 +41,42 @@
   }
 
   .box3 {
-    height: 35%;
+    height: 30%;
     width: 100%;
-    background-color: lightgray;
+    background-color:#D9D9D9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
+
+  /* .workshops-title{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  } */
 
   .icons{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
   }
 
   .title {
-    margin: 0px;
-    padding: 5px;
-    font-size: 20px;
+    /* margin: 0px; */
+    padding: 0.3125rem;
+    font-size: 1.25rem;
     font-weight: bold;
   }
 
   .icon-span {
     position: relative;
-    bottom: 5px;
-    padding-right: 10px;
+    bottom: 0.1325rem;
+    padding-right: 0.625rem;
+  }
+
+  .title, .icon-span{
+    color:#3F3737;
   }
 
   .box:hover {
@@ -69,28 +85,28 @@
 
 
   .imageOfType {
-    margin-top: 5px;
-    margin-right: 5px;
-    ;
+    margin-top: 0.3125rem;
+    margin-right: 0.3125rem;
+   
   }
 
   /*Style for main page with a list of workshops*/
 
-  .header-and-most-popular {
-    width: 95%;
-
+  .div-between-header-and-popular {
+    height: 2.5rem;
 
   }
+ 
 
   header {
-    height: 150px;
+    height: 9.375rem;
     background-color: #3F3737;
     color: white;
     text-align: center;
   }
 
   .most-popular-workshops {
-    height: 250px;
+    height: 15.625rem;
     background-color: #C9CFCF;
     text-align: center;
   }
@@ -364,20 +380,29 @@
 .most-popular-part{
   display:flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
+  /* align-items: center; */
   align-items: center;
+  background-color: #D9D9D9;
 }
 
 .slider-header{
   text-align: center;
-  margin: 5px;
-  width: 100%;
+  /* margin: 5px; */
+  /* width: 100%; */
+  font-size: 3.75rem;
+  font-weight: 700;
+  margin-left: 1.75rem;
+  margin-right: 1.25rem;
+  width: 25%;
+  color: #3F3737;
 }
 .slider-container{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width:75%
+  width:75%;
+  margin-right: 1.75rem;
 }
 .swiper {
   width: 100%;
@@ -388,7 +413,7 @@
 justify-content: center;
  padding: 20px;
  width: 40%;
-  /*height: 95%;*/
+cursor: pointer;
 
 }
 .slides{
