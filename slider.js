@@ -79,6 +79,7 @@ function popupForMostPopular() {
             .getElementById("popup-main-image")
             .setAttribute("src", json[elementId].popupImage);
           document.getElementById("myPopup").classList.toggle("show");
+          document.getElementById("myPopup").scrollTo(0, 0);
         };
       }
     });
