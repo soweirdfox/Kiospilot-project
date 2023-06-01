@@ -240,10 +240,10 @@
 
   .button{
     padding: 1.25rem 2.5rem;
-    background-color: #555;
-    color: white;
+    background-color: white;
+    color: #3F3737;
     font-weight: bold;
-    border-radius: 5px;
+    border: 1px solid #3F3737;
     margin: 2.5rem 2.5rem 5rem 2.5rem;
   }
 

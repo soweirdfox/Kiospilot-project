@@ -105,3 +105,16 @@ function popupForWorkshop() {
 function closePopup() {
   document.getElementById("myPopup").classList.remove("show");
 }
+
+
+//print the popup content when user clicks "Print" button
+function popupPrint(){
+  let printOne = document.getElementById('myPopup').innerHTML;
+   let w = window.open();
+  
+   w.document.write('<html><head><title>Copy Printed</title><link rel="stylesheet" href="style.css"></head><body>' + printOne + '</body></html>');
+   setTimeout(function() {w.window.print()}, 100);
+   setTimeout(function() {w.close()}, 100);
+   document.getElementById("myPopup").scrollTo(0, 0);
+   return false;
+}
