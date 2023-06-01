@@ -78,6 +78,28 @@ function popupForMostPopular() {
           document
             .getElementById("popup-main-image")
             .setAttribute("src", json[elementId].popupImage);
+            document.getElementById("popup-pitch").innerText = json[elementId].pitch;  
+          document.getElementById("p-description").innerText = json[elementId].description;
+          const steps = json[elementId].instructions;
+          const fullStepContainer = document.getElementById("steps-container");
+          const stepContainer = document.createElement("div");
+          fullStepContainer.appendChild(stepContainer);
+          stepContainer.id = "int-step-cont";
+          for (let i = 0; i<steps.length; i++){
+
+            let stepHeader = document.createElement("h3");
+            stepHeader.classList.add('popup-h3');
+            let stepHeaderText = document.createTextNode(`Step ${i+1}`);
+            stepHeader.appendChild(stepHeaderText);
+            stepContainer.appendChild(stepHeader);
+            let stepPara = document.createElement("div");
+            stepPara.classList.add("popup-p");
+            let stepText = document.createTextNode(steps[i]);
+            stepPara.appendChild(stepText);
+            stepContainer.appendChild(stepPara);
+          }
+          document.getElementById("materials").innerText = json[elementId].materials;
+          document.getElementById("source").innerText = json[elementId].source;
           document.getElementById("myPopup").classList.toggle("show");
           document.getElementById("myPopup").scrollTo(0, 0);
         };
