@@ -84,7 +84,9 @@
   }
 
 
-  .imageOfType {
+  .img-cont {
+    display: flex;
+    flex-direction: row;
     margin-top: 0.3125rem;
     margin-right: 0.3125rem;
    

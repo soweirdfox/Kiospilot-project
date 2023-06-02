@@ -6,7 +6,7 @@ fetch("workshops1.json")
          let swiperSlide = document.createElement("div");
          swiperSlide.className = "swiper-slide";
          swiperSlide.innerHTML =`<div class="box" onclick="popupForMostPopular()">
-         <div class="box2" style="background-image: url(${json[i].backgroungImage}); background-size: cover;"><img class="imageOfType" src="${json[i].typeImage}" width="30px"></div>
+         <div class="box2" style="background-image: url(${json[i].backgroungImage}); background-size: cover;"><div class="img-cont" id="imagesOfTypePop${i}"></div></div>
          <div class="box3">
            <p class="title">${json[i].title}</p>
          
@@ -31,6 +31,15 @@ fetch("workshops1.json")
          let swiperWrapper = document.querySelector(".swiper-wrapper");
          swiperWrapper.appendChild(swiperSlide);
          swiperSlide.id=`pop${i}`;
+         const types = json[i].category;
+         const images = json[i].typeImage;
+         let imageCont = document.getElementById(`imagesOfTypePop${i}`);
+         for (let j=0; j< types.length; j++){
+           let image = document.createElement("img");
+           image.src = images[j];
+           image.style.width = "30px";
+           imageCont.appendChild(image);
+         }
   }
 }
   

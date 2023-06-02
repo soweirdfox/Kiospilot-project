@@ -6,8 +6,8 @@ fetch("workshops1.json")
       const modal = document.createElement("div");
       modal.classList.add("modal");
 
-      modal.innerHTML = modal.innerHTML = `<div class="box" onclick="popupForWorkshop()">
-      <div class="box2" style="background-image: url(${json[i].backgroungImage}); background-size: cover;"><img class="imageOfType" src="${json[i].typeImage}" width="30px"></div>
+      modal.innerHTML =  `<div class="box" onclick="popupForWorkshop()">
+      <div class="box2" style="background-image: url(${json[i].backgroungImage}); background-size: cover;"><div class="img-cont" id="imagesOfType${i}"></div></div>
       <div class="box3">
       
         <p class="title">${json[i].title}</p>
@@ -35,6 +35,15 @@ fetch("workshops1.json")
       const container = document.getElementById("container");
       container.appendChild(modal);
       modal.id = i;
+      const types = json[i].category;
+      const images = json[i].typeImage;
+      let imageCont = document.getElementById(`imagesOfType${i}`);
+      for (let j=0; j< types.length; j++){
+        let image = document.createElement("img");
+        image.src = images[j];
+        image.style.width = "30px";
+        imageCont.appendChild(image);
+      }
     }
   });
 
