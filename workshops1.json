@@ -191,7 +191,7 @@
     ], 
     "backgroungImage":"images/secondWorkshoppopup.jpg",
     "source":"AJ&Smart Berlin",
-    "isPopular":true
+    "isPopular":false
 },
 {
     "title": "PARKING LOT",
@@ -238,7 +238,7 @@
     ], 
     "backgroungImage":"images/secondWorkshoppopup.jpg",
     "source":"Henrik Johansson, Thomas Reibke and Sarah Juhl Gregersen",
-    "isPopular":false
+    "isPopular":true
 },
 {
     "title": "LINE OF ALIGNMENT",
@@ -259,7 +259,7 @@
     ], 
     "backgroungImage":"images/secondWorkshoppopup.jpg",
     "source":"Unknown",
-    "isPopular":false
+    "isPopular":true
 },
 {
     "title": "TROIKA CONSULTING",
