@@ -3,7 +3,7 @@
     "difficulty": "Beginner",
     "minDuration": 5,
     "maxDuration": 30,
-    "category": "Innovation",
+    "category": ["Innovation"],
     "minNumberOfParticipants": 2,
     "maxNumberOfParticipants": 100,
     "popupImage": "images/secondWorkshoppopup.jpg",
@@ -29,7 +29,7 @@
     "category": ["Team"],
     "minNumberOfParticipants": 2,
     "maxNumberOfParticipants": 40,
-    "popupImage": "images/secondWorkshoppopup.jpg",
+    "popupImage": "images/powerfulCreationPopup.jpg",
     "typeImage":"images/teamwork.png",
     "materials": "Printed A4 papers with a large outline of a fish",
     "pitch": "Share fears, anxieties and uncertainties related to the program theme to create openness within a group. ",
@@ -41,7 +41,7 @@
         "Wrap up the exercise by thanking participants and reminding them that in the rapidly-changing world, uncertainty and worry about the future are totally normal. \n Explain that 'putting fish on the table' is an important first step to confronting and dealing with worries and fears. If relevant, explain that elements of the program to follow will offer the chance to further explore some of these stinky fish."
 
     ], 
-    "backgroungImage":"images/secondWorkshoppopup.jpg",
+    "backgroungImage":"images/powerfulCreationPopup.jpg",
     "source":"Hyper Island",
     "isPopular":false
 },
@@ -53,7 +53,7 @@
     "category": ["Team", "Innovation"],
     "minNumberOfParticipants": 2,
     "maxNumberOfParticipants": 100,
-    "popupImage": "images/secondWorkshoppopup.jpg",
+    "popupImage": "images/Workshop1Popup.jpg",
     "typeImage":"images/lightning.png",
     "materials": "Flipchart Paper, Markers, Post-its",
     "pitch": "Design the Five Essential Elements for a Resilient and Enduring Initiative.",
@@ -65,7 +65,7 @@
         "When all elements have been completed, ask participants to step back and take a close look at their draft of the five elements together. Ask them to use What, So What, Now What? in small groups to make sense of all of the possible next steps and prioritize them as a whole group. 15 min.",
         "After the initiative has been launched, invite the participants to revisit their P2P design periodically and adapt elements based on their experience."
     ], 
-    "backgroungImage":"images/secondWorkshoppopup.jpg",
+    "backgroungImage":"images/Workshop1Cover.jpg",
     "source":"Liberating Structures",
     "isPopular":false
 },
@@ -77,7 +77,7 @@
     "category": ["Team", "Energizer"],
     "minNumberOfParticipants": 2,
     "maxNumberOfParticipants": 40,
-    "popupImage": "images/secondWorkshoppopup.jpg",
+    "popupImage": "images/Workshop2Popup.jpg",
     "typeImage":"images/lightning.png",
     "materials": "None",
     "pitch": "Generate calm and focused collective energy in a group.",
@@ -86,7 +86,7 @@
         "The group stands in a close huddled circle with their eyes closed. A variation is to have the group disperse around a room, standing, sitting or lying down.",
         "Explain the rules: The goal is to count to 20 (or the number of members in the group.) Only one person may say one number at a time. If two people speak at the same time, even for the slightest moment, the group must start over at number 1. The group has succeeded when they have counted up to the set number."
     ], 
-    "backgroungImage":"images/secondWorkshoppopup.jpg",
+    "backgroungImage":"images/Workshop2Cover.jpg",
     "source":"Unknown",
     "isPopular":true
 },
@@ -98,7 +98,7 @@
     "category": ["Innovation"],
     "minNumberOfParticipants": 2,
     "maxNumberOfParticipants": 40,
-    "popupImage": "images/secondWorkshoppopup.jpg",
+    "popupImage": "images/Workshop4Popup.jpg",
     "typeImage":"images/lightning.png",
     "materials": "Flipchart Paper, Markers",
     "pitch": "Share fears, anxieties and uncertainties related to the program theme to create openness within a group.",
@@ -109,7 +109,7 @@
         "Small group rounds: The process begins with the first of three or more twenty-minute rounds of conversation for the small groups at each table. During the rounds participants explore the question in focus in an open way. A designated “table host” should support the flow of conversation without leading. At least one person should have the responsibility to “record” the conversation on large paper, using words and drawings. \nAt the end of each twenty-minute round, participants move to new tables. One person stays at each table as a 'table host' for the next round, welcoming the next group and briefly filling them in on what happened in the previous round.",
         "Harvest: After the small groups (and/or in between rounds, as desired) individuals are invited to share insights or other results from their conversations with the rest of the larger group."
     ], 
-    "backgroungImage":"images/secondWorkshoppopup.jpg",
+    "backgroungImage":"images/Workshop4Cover.jpg",
     "source":"World Café Community Foundation",
     "isPopular":true
 },
@@ -121,7 +121,7 @@
     "category": ["Innovation", "Team"],
     "minNumberOfParticipants": 2,
     "maxNumberOfParticipants": 100,
-    "popupImage": "images/secondWorkshoppopup.jpg",
+    "popupImage": "images/Workshop5Popup.jpg",
     "typeImage":"images/lightning.png",
     "materials": "Flipchart Paper, Markers, post-it, A4 papers",
     "pitch": "Liberate Inherent Action and Leadership in Groups of Any Size.",
@@ -133,7 +133,7 @@
         "Conveners facilitate sessions; groups develop recommendations of actions plans. Notes are takend and shared in the room, published or posted (2 rounds of 30 mins OR 1 round of 60 minutes)",
         "Debrief, proceeding distributed, and closing."
     ], 
-    "backgroungImage":"images/secondWorkshoppopup.jpg",
+    "backgroungImage":"images/Workshop5Cover.jpg",
     "source":"Harrison Owen",
     "isPopular":false
 },
@@ -145,7 +145,7 @@
     "category": ["Innovation", "Team"],
     "minNumberOfParticipants": 2,
     "maxNumberOfParticipants": 100,
-    "popupImage": "images/secondWorkshoppopup.jpg",
+    "popupImage": "images/Workshop9Popup.jpg",
     "typeImage":"images/lightning.png",
     "materials": "Printed A3 Ecocycle map for each participant, post-its, markers",
     "pitch": "Analyze the Full Portfolio of Activities and Relationships to Identify Obstacles and Opportunities for Progress.",
@@ -160,7 +160,7 @@
         "In small groups, for each activity that needs to start or get more resources (activities in the Poverty trap), create a first-action step. 10 min. or more as above.",
         "Ask all the groups to focus on all the activities for which there is no consensus. Do a quick round of conversation to make sense of the differences in placement. When possible, create first-action steps to handle each one. 10 min."
     ], 
-    "backgroungImage":"images/secondWorkshoppopup.jpg",
+    "backgroungImage":"images/Workshop9Cover.jpg",
     "source":"Liberating Struuctures",
     "isPopular":false
 },
@@ -172,7 +172,7 @@
     "category": ["Action", "Innovation"],
     "minNumberOfParticipants": 2,
     "maxNumberOfParticipants": 20,
-    "popupImage": "images/secondWorkshoppopup.jpg",
+    "popupImage": "images/Workshop6Popup.jpg",
     "typeImage":"images/lightning.png",
     "materials": "Rectangular post-its, Square post-its (2 different colours), Voting dots (2 different colours), Markers, Timer",
     "pitch": "Take decisions while staying creative replacing all open, unstructured discussion with a clear process.",
@@ -189,7 +189,7 @@
         "Decide what to execute on - 10 mins. \nIt is clear that some solutions are more popular than others to test out, but it's important to know how much effort is required to execute the solutions – so here we use a simple effort/impact scale to determine which solutions to try ASAP, and which should be added to a to-do list, or however you store your backlog. \nThe moderator needs to be very proactive at this step, as it is the only one that has a tendency to open up discussion. The Moderator will now take each solution one by one and add them to the effort/impact scale. Effort, in this case is how much effort we as a team think it will take to implement and impact is the degree to which we think it would solve our problem. \nSo here's what the moderator needs to do: Take the top voted solution, hovers it over the center of the E/I scale and simply asks “higher or lower” - usually some small discussions break out here, so the moderator has to be diligent in finding a consensus and stopping any conversations extending past 20 seconds. Once the effort has been determined, the moderator uses the same drill for impact: “Higher or Lower.” \nNow you have a clear overview of what which high-impact solutions could be executed on and tested very quickly (In the green sweet-spot on the top left), and which high-impact solutions will take more effort (top right). The moderator should now quickly mark all post-its in the sweet spot with a contrasting dot so we can identify them later.",
         "Turn Solutions into Actionable Tasks - 5 mins. \nThe moderator now takes the “Sweet Spot” solutions off the E/I scale and asks the person who wrote the solution to give actionable steps toward testing the solution. When I say actionable, I really mean something that could be executed on in the timeframe of 1–2 weeks. My rule of thumb is a 1-week experiment, but of course this will depend on what the solution entails. \nOnce all these solutions are written up, your team now has actionable tasks that can be committed to (depending on how your team deals with task management, that's for another day). As for the solutions that didn't make it in to the “Sweet Spot”? We actually turn all the high impact solutions into actionable post-its and add them to our backlog so they don't get forgotten. What you might see happening is that the sweet spot actions actually end up solving problems in a way that the higher effort solutions become obsolete and you can later rip them apart!"
     ], 
-    "backgroungImage":"images/secondWorkshoppopup.jpg",
+    "backgroungImage":"images/Workshop6Cover.jpg",
     "source":"AJ&Smart Berlin",
     "isPopular":false
 },
@@ -201,7 +201,7 @@
     "category": ["Team"],
     "minNumberOfParticipants": 2,
     "maxNumberOfParticipants": 40,
-    "popupImage": "images/secondWorkshoppopup.jpg",
+    "popupImage": "images/Workshop10Popup.jpg",
     "typeImage":"images/lightning.png",
     "materials": "Flipchart Paper, Colored Markers, Masking/scotch tape",
     "pitch": "Ensure that important questions do not get lost and that the group can stay focused on the most relevant things.",
@@ -211,7 +211,7 @@
         "Use it throughout the meeting/workshop",
         "As the meeting/workshop comes to a close, ensure that there is time to address the points and questions on the parking lot, with the whole group. \nIf there are any questions left unanswered make sure that you or a group member follows them up."
     ], 
-    "backgroungImage":"images/secondWorkshoppopup.jpg",
+    "backgroungImage":"images/Workshop10Cover.jpg",
     "source":"unknown/ Hyper Island",
     "isPopular":false
 },
@@ -220,10 +220,10 @@
     "difficulty": "Beginner",
     "minDuration": 5,
     "maxDuration": 60,
-    "category": "Innovation",
+    "category": ["Innovation"],
     "minNumberOfParticipants": 2,
     "maxNumberOfParticipants": 40,
-    "popupImage": "images/secondWorkshoppopup.jpg",
+    "popupImage": "images/Workshop8Popup.jpg",
     "typeImage":"images/lightning.png",
     "materials": "Flipchart Paper, Colored Markers",
     "pitch": "Demonstrate three key principles useful for creativity and idea generation.",
@@ -236,7 +236,7 @@
         "Give the groups 2-3 minutes to discuss the experience and draw out learnings and insights from the exercise. You could ask reflection questions like: How was it to do this exercise? What can we learn about creativity from this exercise? What are some principles we can draw out from this?",
         "Bring the groups together, collating their grids in one place and standing in a horseshoe around them. \nAsk the same questions as in Step 5 to the whole group and discuss any answers. Be sure to highlight the commonalities between the groups. As participants share, highlight these key insights: quantity is a condition for quality; building on the ideas of others; the ideas we come up with are usually all the same."
     ], 
-    "backgroungImage":"images/secondWorkshoppopup.jpg",
+    "backgroungImage":"images/Workshop8Cover.jpg",
     "source":"Henrik Johansson, Thomas Reibke and Sarah Juhl Gregersen",
     "isPopular":true
 },
@@ -248,7 +248,7 @@
     "category": ["Team", "Energizer"],
     "minNumberOfParticipants": 2,
     "maxNumberOfParticipants": 40,
-    "popupImage": "images/secondWorkshoppopup.jpg",
+    "popupImage": "images/Workshop12Popup.jpg",
     "typeImage":"images/lightning.png",
     "materials": "None",
     "pitch": "Engage participants while promitng non-verbal communication and teamwork.",
@@ -257,7 +257,7 @@
         "Give the group the task to line-up in order of height (tallest-shortest) without talking.",
         "Repeat the challenge two or three times with progressively more challenging tasks, such as: \nLine up by hair color or eye color (lightest-darkest) \nLine up by date of birth (youngest to oldest) \nLine up by where you were born (farthest-closest) \nA highly challenging alternative is to do any of the above with all participants blindfolded. In this case, the group needs to use physical touch and or clapping to solve the task. This alternative takes much more time and should involve a reflection at the end."
     ], 
-    "backgroungImage":"images/secondWorkshoppopup.jpg",
+    "backgroungImage":"images/Workshop12Cover.jpg",
     "source":"Unknown",
     "isPopular":true
 },
@@ -266,10 +266,10 @@
     "difficulty": "Beginner",
     "minDuration": 5,
     "maxDuration": 30,
-    "category": "Innovation",
+    "category": ["Innovation"],
     "minNumberOfParticipants": 2,
     "maxNumberOfParticipants": 100,
-    "popupImage": "images/secondWorkshoppopup.jpg",
+    "popupImage": "images/Workshop3Popup.jpg",
     "typeImage":"images/lightning.png",
     "materials": "None",
     "pitch": "Get Practical and Imaginative Help from Colleagues Immediately.",
@@ -283,7 +283,7 @@
         "Client turns around and shares what was most valuable about the experience. 1-2 min.",
         "Groups switch to next person and repeat steps."
     ], 
-    "backgroungImage":"images/secondWorkshoppopup.jpg",
+    "backgroungImage":"images/Workshop3Cover.jpg",
     "source":"Liberating Structures",
     "isPopular":true
 }

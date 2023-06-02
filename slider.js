@@ -94,8 +94,7 @@ function popupForMostPopular() {
             stepContainer.appendChild(stepHeader);
             let stepPara = document.createElement("div");
             stepPara.classList.add("popup-p");
-            let stepText = document.createTextNode(steps[i]);
-            stepPara.appendChild(stepText);
+            stepPara.innerText = steps[i]; 
             stepContainer.appendChild(stepPara);
           }
           document.getElementById("materials").innerText = json[elementId].materials;
