@@ -12,18 +12,18 @@ fetch("workshops1.json")
          
            <div class="icons">
             <div class="info-icon">
-           <i class="material-icons" style="font-size: 25px; padding-left: 10px">
-             signal_cellular_alt_2_bar
-           </i>
+            <div id="tool-difficulty-most${i}" class="diff-icon-most">
+           
  
-           <span class="icon-span">${json[i].difficulty}</span>
+           <span id="most-span-diff${i}"class="icon-span">${json[i].difficulty}</span>
+           </div>
            </div>
            <div class="info-icon">
-           <i class="material-icons">group</i>
+           <i class="material-icons most-icon">group</i>
            <span class="icon-span">${json[i].minNumberOfParticipants} - ${json[i].maxNumberOfParticipants}</span>
            </div>
            <div class="info-icon">
-           <i class="material-icons">schedule</i>
+           <i class="material-icons most-icon">schedule</i>
            <span class="icon-span">${json[i].minDuration} - ${json[i].maxDuration}</span>
            </div>
            </div>
@@ -40,6 +40,21 @@ fetch("workshops1.json")
            image.style.width = "30px";
            imageCont.appendChild(image);
          }
+
+         let mostDifCont = document.getElementById(`tool-difficulty-most${i}`);
+         let mostDifImage = document.createElement("img");
+         if (json[i].difficulty === "Beginner"){
+          mostDifImage.src="images/Difficulty---low.png";
+        } else if (json[i].difficulty === "Medium"){
+          mostDifImage.src="images/Difficulty---medium.png";
+        } else if (json[i].difficulty === "Expert"){
+          mostDifImage.src="images/Difficulty---hard.png";
+        } else {
+          mostDifImage.src="images/Difficulty---medium.png";
+        }
+        mostDifImage.classList.add("tool-diff-image-most");
+        let spanDifMost = document.getElementById(`most-span-diff${i}`);
+        mostDifCont.insertBefore(mostDifImage, spanDifMost);
   }
 }
   
@@ -76,6 +91,24 @@ function popupForMostPopular() {
           console.log(elementId);
           document.getElementById("popup-header").innerText =
             json[elementId].title;
+
+            //add image for difficulty according to difficulty of workshops
+          let popDifCont = document.getElementById("popDifficulty");
+          let popDifImage = document.createElement("img");
+          if (json[elementId].difficulty === "Beginner"){
+            popDifImage.src="images/Difficulty---low.png";
+          } else if (json[elementId].difficulty === "Medium"){
+            popDifImage.src="images/Difficulty---medium.png";
+          } else if (json[elementId].difficulty === "Expert"){
+            popDifImage.src="images/Difficulty---hard.png";
+          } else {
+            popDifImage.src="images/Difficulty---medium.png";
+          }
+          popDifImage.classList.add("pop-head-image");
+          popDifImage.id="popIm";
+          
+          popDifCont.appendChild(popDifImage);
+
           document.getElementById("popup-difficulty").innerText =
             json[elementId].difficulty;
           document.getElementById(

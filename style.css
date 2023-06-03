@@ -92,6 +92,30 @@
    
   }
 
+  .work-icons, .tool-diff-image{
+    margin-right: 0.3125rem;
+    margin-left: 0.3125rem;
+  }
+
+  .most-icon, .tool-diff-image-most{
+    margin-right: 0.125rem;
+  }
+
+  .tool-diff-image-most{
+    height: 2rem;
+    margin-left:0.125rem;
+  }
+
+  .info-icon, .diff-icon, .diff-icon-most {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  
+
+
+
   /*Style for main page with a list of workshops*/
 
   .div-between-header-and-popular {
@@ -179,17 +203,26 @@
     position: absolute;
     right: 5rem;
     top: 2.5rem;
-    cursor: pointer;
+    
   }
 
   .close-btn-container:hover {
-    outline: 1px solid #3F3737;
+    cursor: pointer;
+  }
+
+  .close-btn-container:active{
+    transform: translateY(2px);
   }
 
   .close-img{
     width: 1.5rem;
   }
 
+  .pop-head-image, .tool-diff-image{
+    height: 2.5rem;
+  }
+
+  
 
 
   /*Style for pop up*/

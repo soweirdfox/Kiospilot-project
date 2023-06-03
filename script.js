@@ -15,18 +15,18 @@ fetch("workshops1.json")
       
         <div class="icons">
         <div class="info-icon">
-        <i class="material-icons" style="font-size: 25px; padding-left: 10px">
-          signal_cellular_alt_2_bar
-        </i>
+        <div id="tool-difficulty${i}" class="diff-icon">
         
-        <span class="icon-span">${json[i].difficulty}</span>
+        
+        <span id="span-diff${i}" class="icon-span">${json[i].difficulty}</span>
+        </div>
         </div>
         <div class="info-icon">
-        <i class="material-icons">group</i>
+        <i class="material-icons work-icons">group</i>
         <span class="icon-span">${json[i].minNumberOfParticipants} - ${json[i].maxNumberOfParticipants}</span>
         </div>
         <div class="info-icon">
-        <i class="material-icons">schedule</i>
+        <i class="material-icons work-icons">schedule</i>
         <span class="icon-span">${json[i].minDuration} - ${json[i].maxDuration}</span>
         </div>
         </div>
@@ -44,6 +44,23 @@ fetch("workshops1.json")
         image.style.width = "30px";
         imageCont.appendChild(image);
       }
+
+      //add image for difficulty according to difficulty of workshops
+      let popDifCont = document.getElementById(`tool-difficulty${i}`);
+      let popDifImage = document.createElement("img");
+      if (json[i].difficulty === "Beginner"){
+        popDifImage.src="images/Difficulty---low.png";
+      } else if (json[i].difficulty === "Medium"){
+        popDifImage.src="images/Difficulty---medium.png";
+      } else if (json[i].difficulty === "Expert"){
+        popDifImage.src="images/Difficulty---hard.png";
+      } else {
+        popDifImage.src="images/Difficulty---medium.png";
+      }
+      popDifImage.classList.add("tool-diff-image");
+      // popDifImage.id="tool-diff";
+      let spanDif = document.getElementById(`span-diff${i}`);
+      popDifCont.insertBefore(popDifImage, spanDif);
     }
   });
 
@@ -59,6 +76,26 @@ function popupForWorkshop() {
           console.log(elementId);
           document.getElementById("popup-header").innerText =
             json[elementId].title;
+
+          //add image for difficulty according to difficulty of workshops
+          let popDifCont = document.getElementById("popDifficulty");
+          let popDifImage = document.createElement("img");
+          if (json[elementId].difficulty === "Beginner"){
+            popDifImage.src="images/Difficulty---low.png";
+          } else if (json[elementId].difficulty === "Medium"){
+            popDifImage.src="images/Difficulty---medium.png";
+          } else if (json[elementId].difficulty === "Expert"){
+            popDifImage.src="images/Difficulty---hard.png";
+          } else {
+            popDifImage.src="images/Difficulty---medium.png";
+          }
+          popDifImage.classList.add("pop-head-image");
+          popDifImage.id="popIm";
+          
+          popDifCont.appendChild(popDifImage);
+
+// {/* <img src="images/Difficulty---medium.png" alt="dificulty" height="30px"></img> */}
+
           document.getElementById("popup-difficulty").innerText =
             json[elementId].difficulty;
           document.getElementById(
@@ -101,9 +138,14 @@ function popupForWorkshop() {
 
 //close popup when user clicks at Close button
 function closePopup() {
+  //remove steps from previous popup window
   let parent = document.getElementById("steps-container");
   let stepChild = document.getElementById("int-step-cont");
   parent.removeChild(stepChild);
+  //remove difficulty image from previous popup window
+  let imgParent = document.getElementById("popDifficulty");
+  let imgChild = document.getElementById("popIm");
+  imgParent.removeChild(imgChild);
   document.getElementById("myPopup").classList.remove("show");
 }
 
